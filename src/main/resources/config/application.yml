@@ -111,7 +111,7 @@ jhipster:
         #allow-credentials: true
         #max-age: 1800
     mail:
-        from: MentorCarpatin@localhost
+        from: admin@mentorcarpatin
     swagger:
         default-include-pattern: /api/.*
         title: MentorCarpatin API

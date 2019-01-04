@@ -142,3 +142,9 @@ Desktop.ini
 # ESLint
 ######################
 .eslintcache
+
+######################
+# Environment
+######################
+.env
+/src/main/resources/application.properties

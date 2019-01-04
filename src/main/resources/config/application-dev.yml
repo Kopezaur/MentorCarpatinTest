@@ -44,9 +44,9 @@ spring:
             indent-output: true
     datasource:
         type: com.zaxxer.hikari.HikariDataSource
-        url: jdbc:postgresql://localhost:5432/MentorCarpatin
-        username: MentorCarpatin
-        password:
+        url: jdbc:postgresql://localhost:5432/mentorcarpatin
+        username: postgres
+        password: pstgrs95
         hikari:
             auto-commit: false
     jpa:
@@ -130,6 +130,8 @@ jhipster:
             host: localhost
             port: 5000
             queue-size: 512
+    registry:
+        password: admin
 
 # ===================================================================
 # Application specific properties
