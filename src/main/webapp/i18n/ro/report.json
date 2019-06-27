@@ -1,0 +1,30 @@
+{
+    "mentorCarpatinApp": {
+        "report": {
+            "home": {
+                "title": "Reports",
+                "createLabel": "Creeare o nouă entitate Report",
+                "createOrEditLabel": "Creeare sau editare Report",
+                "search": "Căutare după Report",
+                "notFound": "No Report found"
+            },
+            "created": "A fost creată o nouă entitate Report cu identificatorul {{ param }}",
+            "updated": "Report cu identificatorul {{ param }} a fost actualizată",
+            "deleted": "Report cu identificatorul {{ param }} a fost ștearsă",
+            "delete": {
+                "question": "Sunteți sigur că doriți să ștergeți Report {{ id }}?"
+            },
+            "detail": {
+                "title": "Report"
+            },
+            "description": "Description",
+            "noOfVictims": "No Of Victims",
+            "severity": "Severity",
+            "day": "Day",
+            "month": "Month",
+            "year": "Year",
+            "mountainRegion": "Mountain Region",
+            "author": "Author"
+        }
+    }
+}

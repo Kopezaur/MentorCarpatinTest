@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<databaseChangeLog
+    xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.6.xsd">
+    <!--
+        Added the constraints for entity MountainRegion.
+    -->
+    <changeSet id="20190627131918-2" author="jhipster">
+        
+        <addForeignKeyConstraint baseColumnNames="country_id"
+                                 baseTableName="mountain_region"
+                                 constraintName="fk_mountain_region_country_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="country"/>
+
+        <addForeignKeyConstraint baseColumnNames="rescue_service_id"
+                                 baseTableName="mountain_region"
+                                 constraintName="fk_mountain_region_rescue_service_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="rescue_service"/>
+
+    </changeSet>
+</databaseChangeLog>

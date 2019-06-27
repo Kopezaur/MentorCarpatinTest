@@ -1,0 +1,68 @@
+<div class="row justify-content-center">
+    <div class="col-8">
+        <form name="editForm" role="form" novalidate (ngSubmit)="save()" [formGroup]="editForm">
+            <h2 id="jhi-report-heading" jhiTranslate="mentorCarpatinApp.report.home.createOrEditLabel">Create or edit a Report</h2>
+            <div>
+                <jhi-alert-error></jhi-alert-error>
+                <div class="form-group" [hidden]="!editForm.get('id').value">
+                    <label for="id" jhiTranslate="global.field.id">ID</label>
+                    <input type="text" class="form-control" id="id" name="id" formControlName="id"
+                        readonly />
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="mentorCarpatinApp.report.description" for="field_description">Description</label>
+                    <input type="text" class="form-control" name="description" id="field_description"
+                           formControlName="description"/>
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="mentorCarpatinApp.report.noOfVictims" for="field_noOfVictims">No Of Victims</label>
+                    <input type="number" class="form-control" name="noOfVictims" id="field_noOfVictims"
+                           formControlName="noOfVictims"/>
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="mentorCarpatinApp.report.severity" for="field_severity">Severity</label>
+                    <input type="text" class="form-control" name="severity" id="field_severity"
+                           formControlName="severity"/>
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="mentorCarpatinApp.report.day" for="field_day">Day</label>
+                    <input type="text" class="form-control" name="day" id="field_day"
+                           formControlName="day"/>
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="mentorCarpatinApp.report.month" for="field_month">Month</label>
+                    <input type="text" class="form-control" name="month" id="field_month"
+                           formControlName="month"/>
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="mentorCarpatinApp.report.year" for="field_year">Year</label>
+                    <input type="text" class="form-control" name="year" id="field_year"
+                           formControlName="year"/>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="mentorCarpatinApp.report.mountainRegion" for="field_mountainRegion">Mountain Region</label>
+                    <select class="form-control" id="field_mountainRegion" name="mountainRegion" formControlName="mountainRegion">
+                        <option [ngValue]="null"></option>
+                        <option [ngValue]="mountainRegionOption.id === editForm.get('mountainRegion').value?.id ? editForm.get('mountainRegion').value : mountainRegionOption" *ngFor="let mountainRegionOption of mountainregions; trackBy: trackMountainRegionById">{{mountainRegionOption.id}}</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="mentorCarpatinApp.report.author" for="field_author">Author</label>
+                    <select class="form-control" id="field_author" name="author" formControlName="author">
+                        <option [ngValue]="null"></option>
+                        <option [ngValue]="rescueServiceOption.id === editForm.get('author').value?.id ? editForm.get('author').value : rescueServiceOption" *ngFor="let rescueServiceOption of rescueservices; trackBy: trackRescueServiceById">{{rescueServiceOption.id}}</option>
+                    </select>
+                </div>
+            </div>
+            <div>
+                <button type="button" id="cancel-save" class="btn btn-secondary"  (click)="previousState()">
+                    <fa-icon [icon]="'ban'"></fa-icon>&nbsp;<span jhiTranslate="entity.action.cancel">Cancel</span>
+                </button>
+                <button type="submit" id="save-entity" [disabled]="editForm.invalid || isSaving" class="btn btn-primary">
+                    <fa-icon [icon]="'save'"></fa-icon>&nbsp;<span jhiTranslate="entity.action.save">Save</span>
+                </button>
+            </div>
+        </form>
+    </div>
+</div>

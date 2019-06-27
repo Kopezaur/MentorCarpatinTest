@@ -1,0 +1,25 @@
+{
+    "mentorCarpatinApp": {
+        "rescueService": {
+            "home": {
+                "title": "Rescue Services",
+                "createLabel": "Creeare o nouă entitate Rescue Service",
+                "createOrEditLabel": "Creeare sau editare Rescue Service",
+                "search": "Căutare după Rescue Service",
+                "notFound": "No Rescue Service found"
+            },
+            "created": "A fost creată o nouă entitate Rescue Service cu identificatorul {{ param }}",
+            "updated": "Rescue Service cu identificatorul {{ param }} a fost actualizată",
+            "deleted": "Rescue Service cu identificatorul {{ param }} a fost ștearsă",
+            "delete": {
+                "question": "Sunteți sigur că doriți să ștergeți Rescue Service {{ id }}?"
+            },
+            "detail": {
+                "title": "Rescue Service"
+            },
+            "description": "Description",
+            "noOfEmployees": "No Of Employees",
+            "report": "Report"
+        }
+    }
+}

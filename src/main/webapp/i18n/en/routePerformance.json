@@ -1,0 +1,28 @@
+{
+    "mentorCarpatinApp": {
+        "routePerformance": {
+            "home": {
+                "title": "Route Performances",
+                "createLabel": "Create a new Route Performance",
+                "createOrEditLabel": "Create or edit a Route Performance",
+                "search": "Search for Route Performance",
+                "notFound": "No Route Performance found"
+            },
+            "created": "A new Route Performance is created with identifier {{ param }}",
+            "updated": "A Route Performance is updated with identifier {{ param }}",
+            "deleted": "A Route Performance is deleted with identifier {{ param }}",
+            "delete": {
+                "question": "Are you sure you want to delete Route Performance {{ id }}?"
+            },
+            "detail": {
+                "title": "Route Performance"
+            },
+            "time": "Time",
+            "pace": "Pace",
+            "speed": "Speed",
+            "performanceCoefficient": "Performance Coefficient",
+            "route": "Route",
+            "person": "Person"
+        }
+    }
+}

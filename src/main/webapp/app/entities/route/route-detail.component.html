@@ -1,0 +1,41 @@
+<div class="row justify-content-center">
+    <div class="col-8">
+        <div *ngIf="route">
+            <h2><span jhiTranslate="mentorCarpatinApp.route.detail.title">Route</span> {{route.id}}</h2>
+            <hr>
+            <jhi-alert-error></jhi-alert-error>
+            <dl class="row-md jh-entity-details">
+                <dt><span jhiTranslate="mentorCarpatinApp.route.name">Name</span></dt>
+                <dd>
+                    <span>{{route.name}}</span>
+                </dd>
+                <dt><span jhiTranslate="mentorCarpatinApp.route.length">Length</span></dt>
+                <dd>
+                    <span>{{route.length}}</span>
+                </dd>
+                <dt><span jhiTranslate="mentorCarpatinApp.route.difficulty">Difficulty</span></dt>
+                <dd>
+                    <span>{{route.difficulty}}</span>
+                </dd>
+                <dt><span jhiTranslate="mentorCarpatinApp.route.mountainRegion">Mountain Region</span></dt>
+                <dd>
+                    <span *ngFor="let mountainRegion of route.mountainRegions; let last = last">
+                        <a [routerLink]="['/mountain-region', mountainRegion?.id, 'view' ]">{{mountainRegion.id}}</a>{{last ? '' : ', '}}
+                    </span>
+                </dd>
+            </dl>
+
+            <button type="submit"
+                    (click)="previousState()"
+                    class="btn btn-info">
+                <fa-icon [icon]="'arrow-left'"></fa-icon>&nbsp;<span jhiTranslate="entity.action.back"> Back</span>
+            </button>
+
+            <button type="button"
+                    [routerLink]="['/route', route.id, 'edit']"
+                    class="btn btn-primary">
+                <fa-icon [icon]="'pencil-alt'"></fa-icon>&nbsp;<span jhiTranslate="entity.action.edit"> Edit</span>
+            </button>
+        </div>
+    </div>
+</div>

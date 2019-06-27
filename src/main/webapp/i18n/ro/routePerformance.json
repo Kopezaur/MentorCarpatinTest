@@ -1,0 +1,28 @@
+{
+    "mentorCarpatinApp": {
+        "routePerformance": {
+            "home": {
+                "title": "Route Performances",
+                "createLabel": "Creeare o nouă entitate Route Performance",
+                "createOrEditLabel": "Creeare sau editare Route Performance",
+                "search": "Căutare după Route Performance",
+                "notFound": "No Route Performance found"
+            },
+            "created": "A fost creată o nouă entitate Route Performance cu identificatorul {{ param }}",
+            "updated": "Route Performance cu identificatorul {{ param }} a fost actualizată",
+            "deleted": "Route Performance cu identificatorul {{ param }} a fost ștearsă",
+            "delete": {
+                "question": "Sunteți sigur că doriți să ștergeți Route Performance {{ id }}?"
+            },
+            "detail": {
+                "title": "Route Performance"
+            },
+            "time": "Time",
+            "pace": "Pace",
+            "speed": "Speed",
+            "performanceCoefficient": "Performance Coefficient",
+            "route": "Route",
+            "person": "Person"
+        }
+    }
+}

@@ -1,0 +1,29 @@
+{
+    "mentorCarpatinApp": {
+        "mountainRegion": {
+            "home": {
+                "title": "Mountain Regions",
+                "createLabel": "Create a new Mountain Region",
+                "createOrEditLabel": "Create or edit a Mountain Region",
+                "search": "Search for Mountain Region",
+                "notFound": "No Mountain Region found"
+            },
+            "created": "A new Mountain Region is created with identifier {{ param }}",
+            "updated": "A Mountain Region is updated with identifier {{ param }}",
+            "deleted": "A Mountain Region is deleted with identifier {{ param }}",
+            "delete": {
+                "question": "Are you sure you want to delete Mountain Region {{ id }}?"
+            },
+            "detail": {
+                "title": "Mountain Region"
+            },
+            "regionName": "Region Name",
+            "surface": "Surface",
+            "topPeakName": "Top Peak Name",
+            "topPeakHeight": "Top Peak Height",
+            "country": "Country",
+            "rescueService": "Rescue Service",
+            "route": "Route"
+        }
+    }
+}

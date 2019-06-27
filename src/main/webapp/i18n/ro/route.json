@@ -1,0 +1,27 @@
+{
+    "mentorCarpatinApp": {
+        "route": {
+            "home": {
+                "title": "Routes",
+                "createLabel": "Creeare o nouă entitate Route",
+                "createOrEditLabel": "Creeare sau editare Route",
+                "search": "Căutare după Route",
+                "notFound": "No Route found"
+            },
+            "created": "A fost creată o nouă entitate Route cu identificatorul {{ param }}",
+            "updated": "Route cu identificatorul {{ param }} a fost actualizată",
+            "deleted": "Route cu identificatorul {{ param }} a fost ștearsă",
+            "delete": {
+                "question": "Sunteți sigur că doriți să ștergeți Route {{ id }}?"
+            },
+            "detail": {
+                "title": "Route"
+            },
+            "name": "Name",
+            "length": "Length",
+            "difficulty": "Difficulty",
+            "routePerformance": "Route Performance",
+            "mountainRegion": "Mountain Region"
+        }
+    }
+}

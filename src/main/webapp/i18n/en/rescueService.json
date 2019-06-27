@@ -1,0 +1,25 @@
+{
+    "mentorCarpatinApp": {
+        "rescueService": {
+            "home": {
+                "title": "Rescue Services",
+                "createLabel": "Create a new Rescue Service",
+                "createOrEditLabel": "Create or edit a Rescue Service",
+                "search": "Search for Rescue Service",
+                "notFound": "No Rescue Service found"
+            },
+            "created": "A new Rescue Service is created with identifier {{ param }}",
+            "updated": "A Rescue Service is updated with identifier {{ param }}",
+            "deleted": "A Rescue Service is deleted with identifier {{ param }}",
+            "delete": {
+                "question": "Are you sure you want to delete Rescue Service {{ id }}?"
+            },
+            "detail": {
+                "title": "Rescue Service"
+            },
+            "description": "Description",
+            "noOfEmployees": "No Of Employees",
+            "report": "Report"
+        }
+    }
+}

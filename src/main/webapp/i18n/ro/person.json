@@ -1,0 +1,32 @@
+{
+    "mentorCarpatinApp": {
+        "person": {
+            "home": {
+                "title": "People",
+                "createLabel": "Creeare o nouă entitate Person",
+                "createOrEditLabel": "Creeare sau editare Person",
+                "search": "Căutare după Person",
+                "notFound": "No Person found"
+            },
+            "created": "A fost creată o nouă entitate Person cu identificatorul {{ param }}",
+            "updated": "Person cu identificatorul {{ param }} a fost actualizată",
+            "deleted": "Person cu identificatorul {{ param }} a fost ștearsă",
+            "delete": {
+                "question": "Sunteți sigur că doriți să ștergeți Person {{ id }}?"
+            },
+            "detail": {
+                "title": "Person"
+            },
+            "firstName": "First Name",
+            "lastName": "Last Name",
+            "email": "Email",
+            "phoneNumber": "Phone Number",
+            "birthDate": "Birth Date",
+            "weight": "Weight",
+            "height": "Height",
+            "runningCoefficient": "Running Coefficient",
+            "performanceCoefficient": "Performance Coefficient",
+            "routePerformance": "Route Performance"
+        }
+    }
+}
