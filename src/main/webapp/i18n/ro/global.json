@@ -1,8 +1,7 @@
 {
     "global": {
         "title": "MentorCarpatin",
-        "browsehappy":
-            "Folosiți un browser <strong>vechi</strong>. Va rugăm <a href=\"http://browsehappy.com/?locale=en\"> să îl actualizați</a> pentru o experiență îmbunătațită.",
+        "browsehappy": "Folosiți un browser <strong>vechi</strong>. Va rugăm <a href=\"http://browsehappy.com/?locale=en\"> să îl actualizați</a> pentru o experiență îmbunătațită.",
         "menu": {
             "home": "Acasă",
             "jhipster-needle-menu-add-element": "JHipster will add additional menu entries here (do not translate!)",
@@ -11,6 +10,13 @@
                 "bankAccount": "ContBancar",
                 "label": "Etichetă",
                 "operation": "Operație",
+                "person": "Person",
+                "route": "Route",
+                "routePerformance": "Route Performance",
+                "mountainRegion": "Mountain Region",
+                "country": "Country",
+                "report": "Report",
+                "rescueService": "Rescue Service",
                 "jhipster-needle-menu-add-entry": "JHipster will add additional entities here (do not translate!)"
             },
             "account": {
@@ -60,8 +66,7 @@
                 "authenticated": {
                     "prefix": "Dacă doriți să vă ",
                     "link": "autentificați",
-                    "suffix":
-                        ", puteți încerca conturile implicite:<br/>- Administrator (login=\"admin\" și parola=\"admin\") <br/>- Utilizator (login=\"user\" și parola=\"user\")."
+                    "suffix": ", puteți încerca conturile implicite:<br/>- Administrator (login=\"admin\" și parola=\"admin\") <br/>- Utilizator (login=\"user\" și parola=\"user\")."
                 },
                 "register": {
                     "noaccount": "Încă nu aveți un cont?",

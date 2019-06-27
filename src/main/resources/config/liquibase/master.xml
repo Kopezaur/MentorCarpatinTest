@@ -5,6 +5,17 @@
     xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.5.xsd">
 
     <include file="config/liquibase/changelog/00000000000000_initial_schema.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20190627131915_added_entity_Person.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20190627131916_added_entity_Route.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20190627131917_added_entity_RoutePerformance.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20190627131918_added_entity_MountainRegion.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20190627131919_added_entity_Country.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20190627131920_added_entity_Report.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20190627131921_added_entity_RescueService.xml" relativeToChangelogFile="false"/>
     <!-- jhipster-needle-liquibase-add-changelog - JHipster will add liquibase changelogs here -->
+    <include file="config/liquibase/changelog/20190627131916_added_entity_constraints_Route.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20190627131917_added_entity_constraints_RoutePerformance.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20190627131918_added_entity_constraints_MountainRegion.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20190627131920_added_entity_constraints_Report.xml" relativeToChangelogFile="false"/>
     <!-- jhipster-needle-liquibase-add-constraints-changelog - JHipster will add liquibase constraints changelogs here -->
 </databaseChangeLog>

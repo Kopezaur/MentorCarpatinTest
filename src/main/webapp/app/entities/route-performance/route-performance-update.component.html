@@ -1,0 +1,58 @@
+<div class="row justify-content-center">
+    <div class="col-8">
+        <form name="editForm" role="form" novalidate (ngSubmit)="save()" [formGroup]="editForm">
+            <h2 id="jhi-route-performance-heading" jhiTranslate="mentorCarpatinApp.routePerformance.home.createOrEditLabel">Create or edit a Route Performance</h2>
+            <div>
+                <jhi-alert-error></jhi-alert-error>
+                <div class="form-group" [hidden]="!editForm.get('id').value">
+                    <label for="id" jhiTranslate="global.field.id">ID</label>
+                    <input type="text" class="form-control" id="id" name="id" formControlName="id"
+                        readonly />
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="mentorCarpatinApp.routePerformance.time" for="field_time">Time</label>
+                    <input type="number" class="form-control" name="time" id="field_time"
+                           formControlName="time"/>
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="mentorCarpatinApp.routePerformance.pace" for="field_pace">Pace</label>
+                    <input type="number" class="form-control" name="pace" id="field_pace"
+                           formControlName="pace"/>
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="mentorCarpatinApp.routePerformance.speed" for="field_speed">Speed</label>
+                    <input type="number" class="form-control" name="speed" id="field_speed"
+                           formControlName="speed"/>
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="mentorCarpatinApp.routePerformance.performanceCoefficient" for="field_performanceCoefficient">Performance Coefficient</label>
+                    <input type="number" class="form-control" name="performanceCoefficient" id="field_performanceCoefficient"
+                           formControlName="performanceCoefficient"/>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="mentorCarpatinApp.routePerformance.route" for="field_route">Route</label>
+                    <select class="form-control" id="field_route" name="route" formControlName="route">
+                        <option [ngValue]="null"></option>
+                        <option [ngValue]="routeOption.id === editForm.get('route').value?.id ? editForm.get('route').value : routeOption" *ngFor="let routeOption of routes; trackBy: trackRouteById">{{routeOption.id}}</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="mentorCarpatinApp.routePerformance.person" for="field_person">Person</label>
+                    <select class="form-control" id="field_person" name="person" formControlName="person">
+                        <option [ngValue]="null"></option>
+                        <option [ngValue]="personOption.id === editForm.get('person').value?.id ? editForm.get('person').value : personOption" *ngFor="let personOption of people; trackBy: trackPersonById">{{personOption.id}}</option>
+                    </select>
+                </div>
+            </div>
+            <div>
+                <button type="button" id="cancel-save" class="btn btn-secondary"  (click)="previousState()">
+                    <fa-icon [icon]="'ban'"></fa-icon>&nbsp;<span jhiTranslate="entity.action.cancel">Cancel</span>
+                </button>
+                <button type="submit" id="save-entity" [disabled]="editForm.invalid || isSaving" class="btn btn-primary">
+                    <fa-icon [icon]="'save'"></fa-icon>&nbsp;<span jhiTranslate="entity.action.save">Save</span>
+                </button>
+            </div>
+        </form>
+    </div>
+</div>

@@ -1,0 +1,51 @@
+<div class="row justify-content-center">
+    <div class="col-8">
+        <div *ngIf="routePerformance">
+            <h2><span jhiTranslate="mentorCarpatinApp.routePerformance.detail.title">Route Performance</span> {{routePerformance.id}}</h2>
+            <hr>
+            <jhi-alert-error></jhi-alert-error>
+            <dl class="row-md jh-entity-details">
+                <dt><span jhiTranslate="mentorCarpatinApp.routePerformance.time">Time</span></dt>
+                <dd>
+                    <span>{{routePerformance.time}}</span>
+                </dd>
+                <dt><span jhiTranslate="mentorCarpatinApp.routePerformance.pace">Pace</span></dt>
+                <dd>
+                    <span>{{routePerformance.pace}}</span>
+                </dd>
+                <dt><span jhiTranslate="mentorCarpatinApp.routePerformance.speed">Speed</span></dt>
+                <dd>
+                    <span>{{routePerformance.speed}}</span>
+                </dd>
+                <dt><span jhiTranslate="mentorCarpatinApp.routePerformance.performanceCoefficient">Performance Coefficient</span></dt>
+                <dd>
+                    <span>{{routePerformance.performanceCoefficient}}</span>
+                </dd>
+                <dt><span jhiTranslate="mentorCarpatinApp.routePerformance.route">Route</span></dt>
+                <dd>
+                    <div *ngIf="routePerformance.route">
+                        <a [routerLink]="['/route', routePerformance.route?.id, 'view']">{{routePerformance.route?.id}}</a>
+                    </div>
+                </dd>
+                <dt><span jhiTranslate="mentorCarpatinApp.routePerformance.person">Person</span></dt>
+                <dd>
+                    <div *ngIf="routePerformance.person">
+                        <a [routerLink]="['/person', routePerformance.person?.id, 'view']">{{routePerformance.person?.id}}</a>
+                    </div>
+                </dd>
+            </dl>
+
+            <button type="submit"
+                    (click)="previousState()"
+                    class="btn btn-info">
+                <fa-icon [icon]="'arrow-left'"></fa-icon>&nbsp;<span jhiTranslate="entity.action.back"> Back</span>
+            </button>
+
+            <button type="button"
+                    [routerLink]="['/route-performance', routePerformance.id, 'edit']"
+                    class="btn btn-primary">
+                <fa-icon [icon]="'pencil-alt'"></fa-icon>&nbsp;<span jhiTranslate="entity.action.edit"> Edit</span>
+            </button>
+        </div>
+    </div>
+</div>

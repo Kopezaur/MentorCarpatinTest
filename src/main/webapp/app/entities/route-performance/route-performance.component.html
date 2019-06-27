@@ -1,0 +1,90 @@
+<div>
+    <h2 id="page-heading">
+        <span jhiTranslate="mentorCarpatinApp.routePerformance.home.title">Route Performances</span>
+        <button id="jh-create-entity" class="btn btn-primary float-right jh-create-entity create-route-performance" [routerLink]="['/route-performance/new']">
+            <fa-icon [icon]="'plus'"></fa-icon>
+            <span class="hidden-sm-down"  jhiTranslate="mentorCarpatinApp.routePerformance.home.createLabel">
+            Create new Route Performance
+            </span>
+        </button>
+    </h2>
+    <jhi-alert></jhi-alert>
+    <div class="row">
+        <div class="col-sm-12">
+            <form name="searchForm" class="form-inline">
+                <div class="input-group w-100 mt-3">
+                    <input type="text" class="form-control" [(ngModel)]="currentSearch" id="currentSearch" name="currentSearch" placeholder="{{ 'mentorCarpatinApp.routePerformance.home.search' | translate }}">
+                    <button class="input-group-append btn btn-info" (click)="search(currentSearch)">
+                        <fa-icon [icon]="'search'"></fa-icon>
+                    </button>
+                    <button class="input-group-append btn btn-danger" (click)="clear()" *ngIf="currentSearch">
+                        <fa-icon [icon]="'trash-alt'"></fa-icon>
+                    </button>
+                </div>
+            </form>
+        </div>
+    </div>
+    <br/>
+    <div class="alert alert-warning" *ngIf="routePerformances?.length === 0">
+        <span jhiTranslate="mentorCarpatinApp.routePerformance.home.notFound">No routePerformances found</span>
+    </div>
+    <div class="table-responsive" *ngIf="routePerformances?.length > 0">
+        <table class="table table-striped">
+            <thead>
+            <tr>
+            <th><span jhiTranslate="global.field.id">ID</span></th>
+            <th><span jhiTranslate="mentorCarpatinApp.routePerformance.time">Time</span></th>
+            <th><span jhiTranslate="mentorCarpatinApp.routePerformance.pace">Pace</span></th>
+            <th><span jhiTranslate="mentorCarpatinApp.routePerformance.speed">Speed</span></th>
+            <th><span jhiTranslate="mentorCarpatinApp.routePerformance.performanceCoefficient">Performance Coefficient</span></th>
+            <th><span jhiTranslate="mentorCarpatinApp.routePerformance.route">Route</span></th>
+            <th><span jhiTranslate="mentorCarpatinApp.routePerformance.person">Person</span></th>
+            <th></th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr *ngFor="let routePerformance of routePerformances ;trackBy: trackId">
+                <td><a [routerLink]="['/route-performance', routePerformance.id, 'view' ]">{{routePerformance.id}}</a></td>
+                <td>{{routePerformance.time}}</td>
+                <td>{{routePerformance.pace}}</td>
+                <td>{{routePerformance.speed}}</td>
+                <td>{{routePerformance.performanceCoefficient}}</td>
+                <td>
+                    <div *ngIf="routePerformance.route">
+                        <a [routerLink]="['../route', routePerformance.route?.id, 'view' ]" >{{routePerformance.route?.id}}</a>
+                    </div>
+                </td>
+                <td>
+                    <div *ngIf="routePerformance.person">
+                        <a [routerLink]="['../person', routePerformance.person?.id, 'view' ]" >{{routePerformance.person?.id}}</a>
+                    </div>
+                </td>
+                <td class="text-right">
+                    <div class="btn-group">
+                        <button type="submit"
+                                [routerLink]="['/route-performance', routePerformance.id, 'view' ]"
+                                class="btn btn-info btn-sm">
+                            <fa-icon [icon]="'eye'"></fa-icon>
+                            <span class="d-none d-md-inline" jhiTranslate="entity.action.view">View</span>
+                        </button>
+                        <button type="submit"
+                                [routerLink]="['/route-performance', routePerformance.id, 'edit']"
+                                class="btn btn-primary btn-sm">
+                            <fa-icon [icon]="'pencil-alt'"></fa-icon>
+                            <span class="d-none d-md-inline" jhiTranslate="entity.action.edit">Edit</span>
+                        </button>
+                        <button type="submit"
+                                [routerLink]="['/', 'route-performance', { outlets: { popup: routePerformance.id + '/delete'} }]"
+                                replaceUrl="true"
+                                queryParamsHandling="merge"
+                                class="btn btn-danger btn-sm">
+                            <fa-icon [icon]="'times'"></fa-icon>
+                            <span class="d-none d-md-inline" jhiTranslate="entity.action.delete">Delete</span>
+                        </button>
+                    </div>
+                </td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+</div>

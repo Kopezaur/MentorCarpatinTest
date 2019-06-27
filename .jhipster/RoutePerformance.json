@@ -1,0 +1,46 @@
+{
+    "name": "RoutePerformance",
+    "fields": [
+        {
+            "fieldName": "time",
+            "fieldType": "Integer"
+        },
+        {
+            "fieldName": "pace",
+            "fieldType": "Double"
+        },
+        {
+            "fieldName": "speed",
+            "fieldType": "Double"
+        },
+        {
+            "fieldName": "performanceCoefficient",
+            "fieldType": "Double"
+        }
+    ],
+    "relationships": [
+        {
+            "relationshipType": "many-to-one",
+            "otherEntityName": "route",
+            "otherEntityRelationshipName": "routePerformance",
+            "relationshipName": "route",
+            "otherEntityField": "id"
+        },
+        {
+            "relationshipType": "many-to-one",
+            "otherEntityName": "person",
+            "otherEntityRelationshipName": "routePerformance",
+            "relationshipName": "person",
+            "otherEntityField": "id"
+        }
+    ],
+    "changelogDate": "20190627131917",
+    "entityTableName": "route_performance",
+    "dto": "no",
+    "pagination": "no",
+    "service": "serviceImpl",
+    "jpaMetamodelFiltering": false,
+    "fluentMethods": true,
+    "clientRootFolder": "",
+    "applications": "*"
+}

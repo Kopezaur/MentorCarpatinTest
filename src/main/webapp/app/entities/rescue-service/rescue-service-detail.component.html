@@ -1,0 +1,31 @@
+<div class="row justify-content-center">
+    <div class="col-8">
+        <div *ngIf="rescueService">
+            <h2><span jhiTranslate="mentorCarpatinApp.rescueService.detail.title">Rescue Service</span> {{rescueService.id}}</h2>
+            <hr>
+            <jhi-alert-error></jhi-alert-error>
+            <dl class="row-md jh-entity-details">
+                <dt><span jhiTranslate="mentorCarpatinApp.rescueService.description">Description</span></dt>
+                <dd>
+                    <span>{{rescueService.description}}</span>
+                </dd>
+                <dt><span jhiTranslate="mentorCarpatinApp.rescueService.noOfEmployees">No Of Employees</span></dt>
+                <dd>
+                    <span>{{rescueService.noOfEmployees}}</span>
+                </dd>
+            </dl>
+
+            <button type="submit"
+                    (click)="previousState()"
+                    class="btn btn-info">
+                <fa-icon [icon]="'arrow-left'"></fa-icon>&nbsp;<span jhiTranslate="entity.action.back"> Back</span>
+            </button>
+
+            <button type="button"
+                    [routerLink]="['/rescue-service', rescueService.id, 'edit']"
+                    class="btn btn-primary">
+                <fa-icon [icon]="'pencil-alt'"></fa-icon>&nbsp;<span jhiTranslate="entity.action.edit"> Edit</span>
+            </button>
+        </div>
+    </div>
+</div>

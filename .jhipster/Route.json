@@ -1,0 +1,42 @@
+{
+    "name": "Route",
+    "fields": [
+        {
+            "fieldName": "name",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "length",
+            "fieldType": "Double"
+        },
+        {
+            "fieldName": "difficulty",
+            "fieldType": "String"
+        }
+    ],
+    "relationships": [
+        {
+            "relationshipType": "one-to-many",
+            "otherEntityName": "routePerformance",
+            "otherEntityRelationshipName": "route",
+            "relationshipName": "routePerformance"
+        },
+        {
+            "relationshipType": "many-to-many",
+            "otherEntityName": "mountainRegion",
+            "otherEntityRelationshipName": "route",
+            "relationshipName": "mountainRegion",
+            "otherEntityField": "id",
+            "ownerSide": true
+        }
+    ],
+    "changelogDate": "20190627131916",
+    "entityTableName": "route",
+    "dto": "no",
+    "pagination": "no",
+    "service": "serviceImpl",
+    "jpaMetamodelFiltering": false,
+    "fluentMethods": true,
+    "clientRootFolder": "",
+    "applications": "*"
+}

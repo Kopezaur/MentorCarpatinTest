@@ -1,0 +1,51 @@
+<div class="row justify-content-center">
+    <div class="col-8">
+        <div *ngIf="mountainRegion">
+            <h2><span jhiTranslate="mentorCarpatinApp.mountainRegion.detail.title">Mountain Region</span> {{mountainRegion.id}}</h2>
+            <hr>
+            <jhi-alert-error></jhi-alert-error>
+            <dl class="row-md jh-entity-details">
+                <dt><span jhiTranslate="mentorCarpatinApp.mountainRegion.regionName">Region Name</span></dt>
+                <dd>
+                    <span>{{mountainRegion.regionName}}</span>
+                </dd>
+                <dt><span jhiTranslate="mentorCarpatinApp.mountainRegion.surface">Surface</span></dt>
+                <dd>
+                    <span>{{mountainRegion.surface}}</span>
+                </dd>
+                <dt><span jhiTranslate="mentorCarpatinApp.mountainRegion.topPeakName">Top Peak Name</span></dt>
+                <dd>
+                    <span>{{mountainRegion.topPeakName}}</span>
+                </dd>
+                <dt><span jhiTranslate="mentorCarpatinApp.mountainRegion.topPeakHeight">Top Peak Height</span></dt>
+                <dd>
+                    <span>{{mountainRegion.topPeakHeight}}</span>
+                </dd>
+                <dt><span jhiTranslate="mentorCarpatinApp.mountainRegion.country">Country</span></dt>
+                <dd>
+                    <div *ngIf="mountainRegion.country">
+                        <a [routerLink]="['/country', mountainRegion.country?.id, 'view']">{{mountainRegion.country?.id}}</a>
+                    </div>
+                </dd>
+                <dt><span jhiTranslate="mentorCarpatinApp.mountainRegion.rescueService">Rescue Service</span></dt>
+                <dd>
+                    <div *ngIf="mountainRegion.rescueService">
+                        <a [routerLink]="['/rescue-service', mountainRegion.rescueService?.id, 'view']">{{mountainRegion.rescueService?.id}}</a>
+                    </div>
+                </dd>
+            </dl>
+
+            <button type="submit"
+                    (click)="previousState()"
+                    class="btn btn-info">
+                <fa-icon [icon]="'arrow-left'"></fa-icon>&nbsp;<span jhiTranslate="entity.action.back"> Back</span>
+            </button>
+
+            <button type="button"
+                    [routerLink]="['/mountain-region', mountainRegion.id, 'edit']"
+                    class="btn btn-primary">
+                <fa-icon [icon]="'pencil-alt'"></fa-icon>&nbsp;<span jhiTranslate="entity.action.edit"> Edit</span>
+            </button>
+        </div>
+    </div>
+</div>

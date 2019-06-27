@@ -1,0 +1,59 @@
+<div class="row justify-content-center">
+    <div class="col-8">
+        <div *ngIf="person">
+            <h2><span jhiTranslate="mentorCarpatinApp.person.detail.title">Person</span> {{person.id}}</h2>
+            <hr>
+            <jhi-alert-error></jhi-alert-error>
+            <dl class="row-md jh-entity-details">
+                <dt><span jhiTranslate="mentorCarpatinApp.person.firstName">First Name</span></dt>
+                <dd>
+                    <span>{{person.firstName}}</span>
+                </dd>
+                <dt><span jhiTranslate="mentorCarpatinApp.person.lastName">Last Name</span></dt>
+                <dd>
+                    <span>{{person.lastName}}</span>
+                </dd>
+                <dt><span jhiTranslate="mentorCarpatinApp.person.email">Email</span></dt>
+                <dd>
+                    <span>{{person.email}}</span>
+                </dd>
+                <dt><span jhiTranslate="mentorCarpatinApp.person.phoneNumber">Phone Number</span></dt>
+                <dd>
+                    <span>{{person.phoneNumber}}</span>
+                </dd>
+                <dt><span jhiTranslate="mentorCarpatinApp.person.birthDate">Birth Date</span></dt>
+                <dd>
+                    <span>{{person.birthDate}}</span>
+                </dd>
+                <dt><span jhiTranslate="mentorCarpatinApp.person.weight">Weight</span></dt>
+                <dd>
+                    <span>{{person.weight}}</span>
+                </dd>
+                <dt><span jhiTranslate="mentorCarpatinApp.person.height">Height</span></dt>
+                <dd>
+                    <span>{{person.height}}</span>
+                </dd>
+                <dt><span jhiTranslate="mentorCarpatinApp.person.runningCoefficient">Running Coefficient</span></dt>
+                <dd>
+                    <span>{{person.runningCoefficient}}</span>
+                </dd>
+                <dt><span jhiTranslate="mentorCarpatinApp.person.performanceCoefficient">Performance Coefficient</span></dt>
+                <dd>
+                    <span>{{person.performanceCoefficient}}</span>
+                </dd>
+            </dl>
+
+            <button type="submit"
+                    (click)="previousState()"
+                    class="btn btn-info">
+                <fa-icon [icon]="'arrow-left'"></fa-icon>&nbsp;<span jhiTranslate="entity.action.back"> Back</span>
+            </button>
+
+            <button type="button"
+                    [routerLink]="['/person', person.id, 'edit']"
+                    class="btn btn-primary">
+                <fa-icon [icon]="'pencil-alt'"></fa-icon>&nbsp;<span jhiTranslate="entity.action.edit"> Edit</span>
+            </button>
+        </div>
+    </div>
+</div>

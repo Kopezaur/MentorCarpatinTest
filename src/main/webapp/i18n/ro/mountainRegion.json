@@ -1,0 +1,29 @@
+{
+    "mentorCarpatinApp": {
+        "mountainRegion": {
+            "home": {
+                "title": "Mountain Regions",
+                "createLabel": "Creeare o nouă entitate Mountain Region",
+                "createOrEditLabel": "Creeare sau editare Mountain Region",
+                "search": "Căutare după Mountain Region",
+                "notFound": "No Mountain Region found"
+            },
+            "created": "A fost creată o nouă entitate Mountain Region cu identificatorul {{ param }}",
+            "updated": "Mountain Region cu identificatorul {{ param }} a fost actualizată",
+            "deleted": "Mountain Region cu identificatorul {{ param }} a fost ștearsă",
+            "delete": {
+                "question": "Sunteți sigur că doriți să ștergeți Mountain Region {{ id }}?"
+            },
+            "detail": {
+                "title": "Mountain Region"
+            },
+            "regionName": "Region Name",
+            "surface": "Surface",
+            "topPeakName": "Top Peak Name",
+            "topPeakHeight": "Top Peak Height",
+            "country": "Country",
+            "rescueService": "Rescue Service",
+            "route": "Route"
+        }
+    }
+}

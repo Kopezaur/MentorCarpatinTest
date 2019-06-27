@@ -1,0 +1,56 @@
+{
+    "name": "MountainRegion",
+    "fields": [
+        {
+            "fieldName": "regionName",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "surface",
+            "fieldType": "Integer"
+        },
+        {
+            "fieldName": "topPeakName",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "topPeakHeight",
+            "fieldType": "Integer"
+        }
+    ],
+    "relationships": [
+        {
+            "relationshipType": "one-to-one",
+            "otherEntityName": "country",
+            "otherEntityRelationshipName": "mountainRegion",
+            "relationshipName": "country",
+            "otherEntityField": "id",
+            "ownerSide": true
+        },
+        {
+            "relationshipType": "one-to-one",
+            "otherEntityName": "rescueService",
+            "otherEntityRelationshipName": "mountainRegion",
+            "relationshipName": "rescueService",
+            "otherEntityField": "id",
+            "ownerSide": true
+        },
+        {
+            "relationshipType": "many-to-many",
+            "otherEntityName": "route",
+            "otherEntityRelationshipName": "mountainRegion",
+            "relationshipName": "route",
+            "otherEntityField": "id",
+            "ownerSide": false
+        }
+    ],
+    "changelogDate": "20190627131918",
+    "entityTableName": "mountain_region",
+    "dto": "no",
+    "pagination": "no",
+    "service": "serviceImpl",
+    "jpaMetamodelFiltering": false,
+    "fluentMethods": true,
+    "clientRootFolder": "",
+    "applications": "*"
+}
