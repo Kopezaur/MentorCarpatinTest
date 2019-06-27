@@ -1,0 +1,87 @@
+/**
+ * The Person entity.
+ */
+entity Person {
+	firstName String,
+	lastName String,
+	email String,
+	phoneNumber String,
+	birthDate Instant,
+    weight Double,
+    height Integer,
+    runningCoefficient Double,
+    performanceCoefficient Double,
+}
+
+entity Route {
+	name String,
+    length Double,
+    difficulty String,
+}
+
+entity RoutePerformance {
+	time Integer,
+    pace Double,
+    speed Double,
+    performanceCoefficient Double,
+}
+
+entity MountainRegion {
+	regionName String,
+    surface Integer,
+    topPeakName String,
+    topPeakHeight Integer,
+}
+
+entity Country {
+	countryName String,
+    countryCode String,
+}
+
+entity Report {
+	description String,
+    noOfVictims Integer,
+    severity String,
+    day String,
+    month String,
+    year String,
+}
+
+entity RescueService {
+	description String,
+    noOfEmployees Integer,
+}
+
+relationship OneToMany {
+  	Route{routePerformance} to RoutePerformance{route}
+}
+
+relationship OneToMany {
+	Person{routePerformance} to RoutePerformance{person}
+}
+
+relationship ManyToMany {
+  Route{mountainRegion} to MountainRegion{route}
+}
+
+relationship OneToOne {
+	MountainRegion{country} to Country
+}
+
+relationship OneToOne {
+	Report{mountainRegion} to MountainRegion
+}
+
+relationship OneToMany {
+	RescueService{report} to Report{author}
+}
+
+relationship OneToOne {
+	MountainRegion{rescueService} to RescueService
+}
+
+// Set service options to all except few
+service all with serviceImpl except Employee, Job
+
+// Set an angular suffix
+// angularSuffix * with mySuffix
